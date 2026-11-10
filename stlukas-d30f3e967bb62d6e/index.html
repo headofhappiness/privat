@@ -200,6 +200,12 @@ nav a:hover{color:var(--forest)}
 .prog i{flex:1;height:4px;border-radius:4px;background:rgba(0,0,0,.08)}
 .prog i.on{background:var(--forest2)}
 
+.wants{border-left:4px solid var(--clay);padding:4px 0 4px 28px}
+details.more{background:var(--paper);border:1px solid var(--rule);border-radius:16px;padding:6px 22px 22px}
+details.more summary{cursor:pointer;list-style:none;font-weight:600;color:var(--forest2);padding:14px 0 0;font-size:15px}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary:before{content:"+";display:inline-block;width:22px;font-weight:700;color:var(--clay)}
+details.more[open] summary:before{content:"–"}
 .qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .q{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:28px 26px;border-top:4px solid var(--clay)}
 .q:nth-child(2){border-top-color:var(--forest2)}.q:nth-child(3){border-top-color:#c9a467}
@@ -207,7 +213,13 @@ nav a:hover{color:var(--forest)}
 .q h3{font:400 24px/1.2 var(--serif);letter-spacing:-.02em;margin:18px 0 10px}
 .q p{font-size:14.5px;color:#5d6a62}
 .q .mine{margin-top:14px;padding-top:14px;border-top:1px solid var(--rule);font-size:13.5px;color:var(--forest2)}
-@media(max-width:780px){.qgrid{grid-template-columns:1fr}}
+@media(max-width:780px){.wants{border-left:4px solid var(--clay);padding:4px 0 4px 28px}
+details.more{background:var(--paper);border:1px solid var(--rule);border-radius:16px;padding:6px 22px 22px}
+details.more summary{cursor:pointer;list-style:none;font-weight:600;color:var(--forest2);padding:14px 0 0;font-size:15px}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary:before{content:"+";display:inline-block;width:22px;font-weight:700;color:var(--clay)}
+details.more[open] summary:before{content:"–"}
+.qgrid{grid-template-columns:1fr}}
 .lq{font-style:italic;font-family:var(--serif);font-size:16.5px!important;line-height:1.55;color:#2f4c40!important}
 .fq{font:italic 400 21px/1.45 var(--serif)!important;color:#2f5a44!important;margin-top:22px!important;padding-left:16px;border-left:3px solid #9fbea8}
 /* final */
@@ -276,7 +288,7 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
       <h1>Kanske en udda fågel.<span class="h1b">Som kan vara <em>helt rätt</em> för rollen.</span></h1>
       <p class="lead">En ärlig matchning mellan Lisa Jonsson och tjänsten som administratör: varför hon passar, vad man kan undra över och hur hon skulle gå in i rollen.</p>
       <div class="chips"><span>Ekonomi och affärsutveckling</span><span>Hälsa och samtalsmetodik</span><span>Eget företagande</span></div>
-      <p class="fine">Lisa har bett Claude och ChatGPT, som hon länge har bollat arbete, företagande och vägval med, att göra den här matchningen. Vi har utgått från hur hon är som person, och vid det här laget ”känner” vi henne ganska väl. Sedan har vi vägt det mot tjänsten. Det är en personlig och subjektiv bild.</p>
+      <p class="fine">”Efter intervjun och arbetsprovet ville jag göra något lite annorlunda. Jag bad Claude och ChatGPT, som jag länge har använt som bollplank, att hjälpa mig analysera matchningen mellan mig och tjänsten, inklusive möjliga svagheter. Det är ingen objektiv bedömning, utan en personlig reflektion som jag står bakom.” <b style="color:#dbe8dd;font-weight:600">Lisa</b></p>
     </div>
     <div class="art" aria-hidden="true">
       <div class="orb">
@@ -293,13 +305,23 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
 <div class="strip">
   <div class="shell">
     <span class="label">I en mening</span>
-    <p>En bred profil med stark ansvarskänsla och ett varmt bemötande, som skulle trivas och utvecklas hos S:t Lukas, och som på halvtid får precis den balans som gör att både jobbet och hon mår bra.</p>
+    <p>En bred profil med stark ansvarskänsla och ett varmt bemötande, som har goda förutsättningar att trivas hos S:t Lukas, och som på halvtid får precis den balans som gör att både jobbet och hon mår bra.</p>
   </div>
 </div>
 
+<section class="section rv" style="padding:64px 0">
+  <div class="shell">
+    <div class="wants">
+      <p class="eyebrow">Det viktigaste först</p>
+      <h2 style="font-size:clamp(30px,3.6vw,44px)">Lisa vill göra just det här arbetet.</h2>
+      <p class="sub" style="max-width:820px">Hon söker inte ett utvecklingsuppdrag förklätt till en halvtid. Hon ser värdet i en välfungerande vardagsadministration: att telefon och mejl blir besvarade, att bokningar och fakturor blir rätt och att klienter och terapeuter kan lita på att det fungerar. Det är det hon vill ansvara för, oavsett hur mycket tid som finns för utveckling.</p>
+    </div>
+  </div>
+</section>
+
 <div class="shell rv">
   <div class="stats">
-    <div class="stat s1"><b>8,6</b><span>Sammanvägd matchning av fem dimensioner</span></div>
+    <div class="stat s1"><b>50 %</b><span>Önskad omfattning, med tydliga ramar</span></div>
     <div class="stat s2"><b>8 av 11</b><span>punkter i annonsen som hon uppfyller fullt ut</span></div>
     <div class="stat s3"><b>2010</b><span>Diplomerad coach sedan dess, ICF/ACC</span></div>
     <div class="stat s4"><b>2</b><span>högskoleutbildningar: företagsekonomi och hälsopromotion</span></div>
@@ -320,7 +342,7 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
           <div class="metric"><div class="mm"><b>Värderingar och sammanhang</b><strong>9<small>/10</small></strong></div><div class="track"><div class="fill" data-w="90"></div></div><p class="why">Hon drivs av mening och nytta och uppskattar samtidigt affärsmässighet och ordning. Samma balans som S:t Lukas beskriver.</p></div>
           <div class="metric"><div class="mm"><b>Digital förmåga och förbättringstänk</b><strong>9<small>/10</small></strong></div><div class="track"><div class="fill" data-w="90"></div></div><p class="why">Hon lär sig verktyg snabbt och ser var ett flöde kan förenklas. Hon vet också att befintliga rutiner ska läras ordentligt först.</p></div>
           <div class="metric"><div class="mm"><b>Helhetsansvar, ekonomi och administration</b><strong>8<small>/10</small></strong></div><div class="track"><div class="fill" data-w="80"></div></div><p class="why">Van att ansvara för kundkontakt, fakturering, planering och uppföljning i egna verksamheter. Clinicbuddy och vårdadministration är nytt för henne.</p></div>
-          <div class="metric"><div class="mm"><b>Långsiktig trivsel</b><strong>8<small>/10</small></strong></div><div class="track"><div class="fill warm" data-w="80"></div></div><p class="why">Vi tror att hon blir stimulerad av S:t Lukas: av verksamheten, av kollegornas kompetens och av att lära sig mer om ert arbete. På halvtid finns dessutom utrymme för hennes egna projekt, och den kombinationen håller länge.</p></div>
+          <div class="metric"><div class="mm"><b>Långsiktig trivsel</b><strong>8<small>/10</small></strong></div><div class="track"><div class="fill warm" data-w="80"></div></div><p class="why">Goda förutsättningar. Hon har lätt att bli engagerad i verksamheten, kollegornas kompetens och att lära sig mer om ert arbete. På halvtid finns dessutom utrymme för hennes egna projekt. Hur väl det håller över tid beror också på hur tjänsten utformas.</p></div>
         </div>
         <p class="mnote">Siffrorna är subjektiva och ungefärliga, inte en formell kompetensbedömning.</p>
       </div>
@@ -329,7 +351,6 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
         <blockquote>Jag tror att S:t Lukas kommer att stimulera mig, med en verksamhet och kollegor jag kan lära mig mycket av.</blockquote>
         <div class="line"></div>
         <p><b>Lisa själv.</b> Att det samtidigt finns utrymme för annat i hennes liv gör att hon kan ge rollen full energi. Därför är 50 % inte en kompromiss.</p>
-        <div class="avg"><b>8,6</b><span>sammanvägd<br>matchning</span></div>
       </aside>
     </div>
   </div>
@@ -341,7 +362,7 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
       <p class="count">02 / Personen bakom CV:t</p>
       <h2>Så här är Lisa att arbeta med.</h2>
     </div>
-    <p class="portrait">Lisa rör sig gärna mellan hjärta och kalkylblad, mellan en idé och ett konkret system. Hon tycker om människor, och hon tycker om när saker fungerar. Hon är snarare åt det lugna och introverta hållet: lyssnar hellre än tar plats och arbetar gärna koncentrerat och självständigt, även på distans. Väl förberedd pratar hon gärna inför människor, men hon minglar inte planlöst. Hon vill ha mål och mening med det hon gör.</p>
+    <p class="portrait">Lisa rör sig gärna mellan hjärta och kalkylblad, mellan en idé och ett konkret system. Hon tycker om människor, och hon tycker om när saker fungerar. Hon är möjlighetsorienterad men också pragmatisk: hon kan lägga mycket energi på något nytt, men uppskattar lika mycket att få konkreta saker gjorda. Hon är snarare lugn än utåtriktad, lyssnar hellre än tar plats och arbetar gärna koncentrerat och självständigt, även på distans. Väl förberedd pratar hon gärna inför människor, men hon minglar inte planlöst. Hon vill ha mål och mening med det hon gör.</p>
     <div class="g3">
       <article class="trait"><div class="num">01</div><h3>Varm utan att vara vag.</h3><p>Omtänksam och bra på att se andra, men vill samtidigt ha tydlighet, ansvar och konkreta lösningar.</p></article>
       <article class="trait"><div class="num">02</div><h3>Nyfiken och orädd för nytt.</h3><p>När något är obekant är hennes första tanke oftare ”hur gör vi?” än ”det går inte”. Det gör henne snabb att komma igång.</p></article>
@@ -389,9 +410,10 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
     <div class="head">
       <p class="count">05 / Kravprofilen</p>
       <h2>Punkt för punkt mot annonsen.</h2>
-      <p class="sub">Ärligt redovisat, även där svaret är nej.</p>
+      <p class="sub">8 av 11 punkter uppfylls fullt ut, 2 delvis och 1 inte än. Ärligt redovisat, även där svaret är nej.</p>
     </div>
-    <div class="tally"><span class="ok">8 Ja</span><span class="half">2 Delvis</span><span class="notyet">1 Inte än</span></div>
+    <details class="more"><summary>Visa genomgången punkt för punkt</summary>
+    <div class="tally" style="margin-top:22px"><span class="ok">8 Ja</span><span class="half">2 Delvis</span><span class="notyet">1 Inte än</span></div>
     <div class="mgrid">
       <div>
         <p class="mlabel">Krav</p>
@@ -415,6 +437,7 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
         </div>
       </div>
     </div>
+  </details>
   </div>
 </section>
 
@@ -445,7 +468,7 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
       <div class="hc"><p class="eyebrow light">Det S:t Lukas får</p><h3>En trygg person som håller ihop vardagen.</h3><ul><li>Erfarenhet av kundkontakt, ansvar och ekonomiflöden</li><li>Ett respektfullt, lugnt och varmt bemötande</li><li>God digital förmåga och känsla för enkla processer</li><li>En kollega med eget driv och förståelse för hälsa</li></ul></div>
       <div class="hc light"><p class="eyebrow">Det Lisa får</p><h3>Ett meningsfullt arbete med tydliga ramar.</h3><ul><li>Kollegor, tillhörighet och en gemensam vardag</li><li>Konkreta uppgifter och ett tydligt ansvar</li><li>Stabilitet utan att lägga företagandet åt sidan</li><li>En verksamhet att lära sig av och växa i</li></ul></div>
     </div>
-    <div class="hreal"><div class="t">50 %</div><p><strong>Inte ett lägre engagemang, utan ett tydligare.</strong> När det är klart vilka dagar hon arbetar, vilket ansvar hon har och vad som är rimligt att hinna, finns förutsättningarna för att hon stannar länge.</p></div>
+    <div class="hreal"><div class="t">50 %</div><p><strong>Inte ett lägre engagemang, utan ett tydligare.</strong> När det är klart vilka dagar hon arbetar, vilket ansvar hon har och vad som är rimligt att hinna, finns goda förutsättningar för att hon stannar länge.</p></div>
   </div>
 </section>
 
@@ -454,11 +477,11 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
     <div class="head">
       <p class="count">08 / Konkret</p>
       <h2>Så tänker sig Lisa de första 90 dagarna.</h2>
-      <p class="sub">Ett förslag att stämma av, som visar hur hon skulle gå in i rollen.</p>
+      <p class="sub">Ett möjligt upplägg som anpassas efter introduktionen och era behov.</p>
     </div>
     <div class="plan">
       <div class="step"><span class="when">Vecka 1–4</span><h3>Lära sig ordentligt</h3><ul><li>Clinicbuddy, bokning och fakturering</li><li>Sekretess och känsliga uppgifter</li><li>Träffa mottagningarna och teamet</li><li>Förstå samarbetet med ekonomibyrån</li></ul><div class="prog"><i class="on"></i><i></i><i></i></div></div>
-      <div class="step"><span class="when">Månad 2</span><h3>Ta eget ansvar</h3><ul><li>Fullt ansvar för sina tilldelade kunders ärenden</li><li>Medlemsregister och utskick till Föreningen S:t Lukas i Göteborg</li><li>Fast upplägg för dagar på plats och på distans</li></ul><div class="prog"><i class="on"></i><i class="on"></i><i></i></div></div>
+      <div class="step"><span class="when">Månad 2</span><h3>Ta eget ansvar</h3><ul><li>Gradvis större ansvar för sina tilldelade kunders ärenden</li><li>Medlemsregister och utskick till Föreningen S:t Lukas i Göteborg</li><li>Fast upplägg för dagar på plats och på distans</li></ul><div class="prog"><i class="on"></i><i class="on"></i><i></i></div></div>
       <div class="step"><span class="when">Månad 3</span><h3>Stabilt och förankrat</h3><ul><li>Löpande arbete i tid, utan att något tappas</li><li>En kort lista med förbättringsidéer att ta upp</li><li>Avstämning: fungerar upplägget för båda?</li></ul><div class="prog"><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
     </div>
   </div>
@@ -472,9 +495,9 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
       <p class="sub">För att båda parter ska veta att förväntningarna stämmer från början.</p>
     </div>
     <div class="qgrid">
-      <article class="q"><div class="qn">01</div><h3>Vilken omfattning landar ni i?</h3><p>Annonsen anger 50–75 %. Har ni bestämt er, eller är det något ni kommer överens om tillsammans?</p><p class="mine">Lisas önskemål är 50 %, med möjlighet att diskutera mer framöver.</p></article>
-      <article class="q"><div class="qn">02</div><h3>Hur fördelas tiden på plats och på distans?</h3><p>Vilka dagar behövs hon på Mölndalsvägen eller i Borås, och hur ofta förekommer resor mellan mottagningarna?</p><p class="mine">Hon föreslår gärna fasta dagar så att alla vet var de har henne.</p></article>
-      <article class="q"><div class="qn">03</div><h3>Finns det utrymme för utveckling?</h3><p>När det löpande arbetet tar all tid hinner man inte förbättra rutinerna. Hur ser ni på att avsätta en liten del av tiden för det?</p><p class="mine">Det löpande går alltid först, men smartare rutiner frigör tid på sikt.</p></article>
+      <article class="q"><div class="qn">01</div><h3>Vilken omfattning, och hur läggs den?</h3><p>Annonsen anger 50–75 %. Har ni bestämt er? Och hur fördelas tiden över veckan: två och en halv sammanhängande dagar eller kortare pass flera dagar?</p><p class="mine">Lisas önskemål är 50 %, med möjlighet att diskutera mer framöver.</p></article>
+      <article class="q"><div class="qn">02</div><h3>Hur fördelas tiden på plats och på distans?</h3><p>Vilka dagar behövs hon på Mölndalsvägen eller i Borås, och hur ofta behöver hon resa till Alingsås och Skövde? Hur planeras den tiden?</p><p class="mine">Hon föreslår gärna fasta dagar så att alla vet var de har henne.</p></article>
+      <article class="q"><div class="qn">03</div><h3>Hur mycket tid finns för utveckling?</h3><p class="lq">”Ni nämner att ni gärna vill ha någon som förbättrar rutiner, vilket jag tycker låter stimulerande. Men hur mycket tid finns för det i praktiken? Om den löpande administrationen fyller arbetstiden kan det vara svårt att hinna, även om viljan finns.”</p><p class="mine">Lisa vill förstå era förväntningar, inte be om en ny arbetsuppgift.</p></article>
     </div>
   </div>
 </section>
@@ -483,8 +506,8 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
   <div class="shell">
     <div class="fc rv">
       <p class="eyebrow">Slutsatsen</p>
-      <h2>Vi tror att Lisa skulle <em>göra jobbet riktigt bra.</em></h2>
-      <p>Inte för att tjänsten använder varje del av hennes bakgrund, utan för att den förenar människor, ansvar och struktur, i en verksamhet där vinsten är medlet och inte målet. Hon kan bli en mycket uppskattad kollega hos er.</p>
+      <h2>Vi tror att Lisa skulle kunna <em>göra jobbet riktigt bra.</em></h2>
+      <p>Inte för att tjänsten använder varje del av hennes bakgrund, utan för att den förenar människor, ansvar och struktur, i en verksamhet där vinsten är medlet och inte målet. Hon har goda förutsättningar att bli en mycket uppskattad kollega hos er.</p>
       <p class="fq">”Tack för intervjun och för arbetsprovet. Jag är intresserad av tjänsten, och jag tror att vi skulle kunna skapa något bra tillsammans.”</p>
       <div class="sig">
         <div class="name">Lisa Jonsson</div>
@@ -498,7 +521,7 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
 
 <footer>
   <div class="shell">
-    <p>Matchningen är gjord av Claude och ChatGPT på Lisas uppdrag, utifrån många tidigare samtal och tjänstebeskrivningen. Citaten är Lisas egna. En personlig och subjektiv reflektion, inte en oberoende utvärdering.</p>
+    <p>Matchningen är gjord med Claude och ChatGPT som bollplank, utifrån många tidigare samtal och tjänstebeskrivningen. Citaten är formulerade tillsammans med Lisa, och hon står bakom dem. En personlig och subjektiv reflektion, inte en oberoende utvärdering.</p>
     <p>Lisa Jonsson × S:t Lukas i Väst · November 2026</p>
   </div>
 </footer>
