@@ -61,6 +61,11 @@ nav a:hover{color:var(--forest)}
 .orb small{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#bfdbca}
 .big50{font:400 clamp(92px,10vw,160px)/1 var(--serif);letter-spacing:-.08em;color:#e7e3cc}
 .big50 span{font:500 16px var(--sans);letter-spacing:0;margin-left:6px}
+.orbname{font:400 clamp(40px,4.4vw,62px)/1.02 var(--serif);letter-spacing:-.04em;color:#e7e3cc;margin:14px 0 16px}
+.orbname span{display:block;font-size:.55em;color:var(--gold);font-style:italic;margin:2px 0}
+.birdwrap{display:flex;justify-content:center;margin-bottom:10px}
+.bird{width:clamp(130px,13vw,190px);height:auto;transform:rotate(-4deg);animation:bob 4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(2deg) translateY(-6px)}}
 .pill{position:absolute;font:400 17px/1.2 var(--serif);color:#e0ece2;background:var(--forest3);border:1px solid rgba(126,159,141,.5);padding:10px 19px;border-radius:99px;white-space:nowrap}
 .pill.a{top:6%;left:-2%;transform:rotate(-8deg)}
 .pill.b{top:44%;right:-9%;transform:rotate(6deg)}
@@ -247,7 +252,9 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
 @media(max-width:780px){
   .shell{width:calc(100% - 36px)}nav{display:none}
   .hero-grid{display:block}.hero-copy{padding:66px 0 30px}.art{min-height:360px;padding-bottom:40px}
-  .orb{width:250px}.big50{font-size:80px}.pill{font-size:13px;padding:7px 13px}.pill.a{left:-10%}.pill.b{right:-12%}.pill.c{left:6%;bottom:0}.hero .lead{font-size:17px}.mm b{flex:1;min-width:0;font-size:15px}.side blockquote{font-size:23px}.fc h2{font-size:32px}.stat b{font-size:38px}
+  .orb{width:250px}.bird{width:110px}.big50{font-size:80px}.orbname{font-size:32px;margin:8px 0 10px}.orbname{font:400 clamp(40px,4.4vw,62px)/1.02 var(--serif);letter-spacing:-.04em;color:#e7e3cc;margin:14px 0 16px}
+.orbname span{display:block;font-size:.55em;color:var(--gold);font-style:italic;margin:2px 0}
+.pill{font-size:13px;padding:7px 13px}.pill.a{left:-10%}.pill.b{right:-12%}.pill.c{left:6%;bottom:0}.hero .lead{font-size:17px}.mm b{flex:1;min-width:0;font-size:15px}.side blockquote{font-size:23px}.fc h2{font-size:32px}.stat b{font-size:38px}
   .strip .shell{grid-template-columns:1fr;gap:8px}
   .section{padding:64px 0}
   .measure,.proof-wrap,.hg,.mgrid,.plan{grid-template-columns:1fr}.side,.proof-lead{position:static}
@@ -258,7 +265,7 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
   footer .shell{flex-direction:column}
 }
 @media(max-width:520px){.g3,.stats{grid-template-columns:1fr}.orb{width:230px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.fill{transition:none}.arc{animation:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.fill{transition:none}.arc{animation:none}.bird{animation:none}}
 </style>
 </head>
 <body>
@@ -284,7 +291,7 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
 <section class="hero" id="top">
   <div class="shell hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow light">S:t Lukas i Väst · Administratör · 50 %</p>
+      <p class="eyebrow light">S:t Lukas i Väst · Administratör</p>
       <h1>Kanske en udda fågel.<span class="h1b">Som kan vara <em>helt rätt</em> för rollen.</span></h1>
       <p class="lead">En ärlig matchning mellan Lisa Jonsson och tjänsten som administratör: varför hon passar, vad man kan undra över och hur hon skulle gå in i rollen.</p>
       <div class="chips"><span>Ekonomi och affärsutveckling</span><span>Hälsa och samtalsmetodik</span><span>Eget företagande</span></div>
@@ -294,7 +301,38 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
       <div class="orb">
         <div class="arc"></div>
         <span class="pill a">Människor</span>
-        <div><small>Den avgörande faktorn</small><div class="big50">50<span>%</span></div><small>En roll med tydliga ramar</small></div>
+        <div><div class="birdwrap"><svg class="bird" viewBox="0 0 200 210" role="img" aria-label="En udda fågel">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- legs -->
+    <path d="M92 150 L86 176 L95 194" stroke="#d8c39b" stroke-width="4"/>
+    <path d="M86 194 h18" stroke="#d8c39b" stroke-width="4"/>
+    <path d="M112 150 L122 172 L112 194" stroke="#d8c39b" stroke-width="4"/>
+    <path d="M104 194 h18" stroke="#d8c39b" stroke-width="4"/>
+    <!-- tail feathers -->
+    <path d="M52 112 C30 100 24 82 30 70" stroke="#e7e3cc" stroke-width="5"/>
+    <path d="M54 120 C34 116 20 104 18 92" stroke="#c9b48c" stroke-width="5"/>
+    <!-- body -->
+    <ellipse cx="102" cy="116" rx="52" ry="42" fill="#e7e3cc"/>
+    <ellipse cx="112" cy="128" rx="30" ry="22" fill="#f6f1df"/>
+    <!-- wing -->
+    <path d="M70 108 C82 92 106 96 108 112 C100 124 82 126 70 108 Z" fill="#c9b48c"/>
+    <!-- head -->
+    <circle cx="140" cy="70" r="30" fill="#e7e3cc"/>
+    <!-- tuft -->
+    <path d="M132 42 C126 26 134 14 144 18" stroke="#d8c39b" stroke-width="4"/>
+    <path d="M140 40 C142 24 152 18 158 24" stroke="#d8c39b" stroke-width="4"/>
+    <path d="M147 43 C156 32 166 34 166 42" stroke="#b36c52" stroke-width="4"/>
+    <!-- beak -->
+    <path d="M166 70 L192 78 L166 84 Z" fill="#d69c72"/>
+    <!-- eyes: one big, one small -->
+    <circle cx="146" cy="64" r="11" fill="#fff"/>
+    <circle cx="150" cy="66" r="5" fill="#173f37"/>
+    <circle cx="131" cy="70" r="5" fill="#fff"/>
+    <circle cx="132" cy="71" r="2.3" fill="#173f37"/>
+    <!-- cheek -->
+    <circle cx="150" cy="84" r="5" fill="#e9b9a0" opacity=".8"/>
+  </g>
+</svg></div><small>En möjlig matchning</small></div>
         <span class="pill b">Struktur</span>
         <span class="pill c">Mening</span>
       </div>
