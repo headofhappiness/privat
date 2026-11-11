@@ -56,7 +56,7 @@ nav a:hover{color:var(--forest)}
 .orb{width:min(450px,100%);aspect-ratio:1;position:relative;border:1px solid rgba(198,221,202,.38);border-radius:50%;display:grid;place-content:center;text-align:center;isolation:isolate}
 .orb:before{content:'';position:absolute;inset:11%;border:1px solid rgba(198,221,202,.33);border-radius:50%}
 .orb:after{content:'';position:absolute;inset:24%;background:rgba(71,120,105,.38);border-radius:50%;z-index:-1}
-.arc{position:absolute;inset:-28px;border:1px dashed rgba(167,202,179,.5);border-radius:50%;animation:spin 80s linear infinite}
+.arc{position:absolute;inset:-28px;border:1px dashed rgba(167,202,179,.5);border-radius:50%;}
 @keyframes spin{to{transform:rotate(360deg)}}
 .orb small{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#bfdbca}
 .big50{font:400 clamp(92px,10vw,160px)/1 var(--serif);letter-spacing:-.08em;color:#e7e3cc}
@@ -64,8 +64,7 @@ nav a:hover{color:var(--forest)}
 .orbname{font:400 clamp(40px,4.4vw,62px)/1.02 var(--serif);letter-spacing:-.04em;color:#e7e3cc;margin:14px 0 16px}
 .orbname span{display:block;font-size:.55em;color:var(--gold);font-style:italic;margin:2px 0}
 .birdwrap{display:flex;justify-content:center;margin-bottom:10px}
-.bird{width:clamp(130px,13vw,190px);height:auto;transform:rotate(-4deg);animation:bob 4s ease-in-out infinite}
-@keyframes bob{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(2deg) translateY(-6px)}}
+.bird{width:clamp(180px,17vw,250px);height:auto;}
 .pill{position:absolute;font:400 17px/1.2 var(--serif);color:#e0ece2;background:var(--forest3);border:1px solid rgba(126,159,141,.5);padding:10px 19px;border-radius:99px;white-space:nowrap}
 .pill.a{top:6%;left:-2%;transform:rotate(-8deg)}
 .pill.b{top:44%;right:-9%;transform:rotate(6deg)}
@@ -252,7 +251,7 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
 @media(max-width:780px){
   .shell{width:calc(100% - 36px)}nav{display:none}
   .hero-grid{display:block}.hero-copy{padding:66px 0 30px}.art{min-height:360px;padding-bottom:40px}
-  .orb{width:250px}.bird{width:110px}.big50{font-size:80px}.orbname{font-size:32px;margin:8px 0 10px}.orbname{font:400 clamp(40px,4.4vw,62px)/1.02 var(--serif);letter-spacing:-.04em;color:#e7e3cc;margin:14px 0 16px}
+  .orb{width:250px}.bird{width:150px}.big50{font-size:80px}.orbname{font-size:32px;margin:8px 0 10px}.orbname{font:400 clamp(40px,4.4vw,62px)/1.02 var(--serif);letter-spacing:-.04em;color:#e7e3cc;margin:14px 0 16px}
 .orbname span{display:block;font-size:.55em;color:var(--gold);font-style:italic;margin:2px 0}
 .pill{font-size:13px;padding:7px 13px}.pill.a{left:-10%}.pill.b{right:-12%}.pill.c{left:6%;bottom:0}.hero .lead{font-size:17px}.mm b{flex:1;min-width:0;font-size:15px}.side blockquote{font-size:23px}.fc h2{font-size:32px}.stat b{font-size:38px}
   .strip .shell{grid-template-columns:1fr;gap:8px}
@@ -301,36 +300,44 @@ footer p{font-size:12px;color:#78837a;max-width:780px}
       <div class="orb">
         <div class="arc"></div>
         <span class="pill a">Människor</span>
-        <div><div class="birdwrap"><svg class="bird" viewBox="0 0 200 210" role="img" aria-label="En udda fågel">
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- legs -->
-    <path d="M92 150 L86 176 L95 194" stroke="#d8c39b" stroke-width="4"/>
-    <path d="M86 194 h18" stroke="#d8c39b" stroke-width="4"/>
-    <path d="M112 150 L122 172 L112 194" stroke="#d8c39b" stroke-width="4"/>
-    <path d="M104 194 h18" stroke="#d8c39b" stroke-width="4"/>
-    <!-- tail feathers -->
-    <path d="M52 112 C30 100 24 82 30 70" stroke="#e7e3cc" stroke-width="5"/>
-    <path d="M54 120 C34 116 20 104 18 92" stroke="#c9b48c" stroke-width="5"/>
+        <div><div class="birdwrap"><svg class="bird" viewBox="0 0 230 200" role="img" aria-label="En glad fågel vid en dator">
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- speech bubble with heart -->
+    <path d="M166 22 h44 a10 10 0 0 1 10 10 v18 a10 10 0 0 1 -10 10 h-24 l-10 10 v-10 h-10 a10 10 0 0 1 -10 -10 v-18 a10 10 0 0 1 10 -10 z" fill="#f6f1df"/>
+    <path d="M188 50 c-10 -7 -13 -11 -11 -15 c2 -4 8 -4 11 1 c3 -5 9 -5 11 -1 c2 4 -1 8 -11 15 z" fill="#b36c52"/>
+    <!-- desk -->
+    <path d="M14 172 H216" stroke="#9fbea8" stroke-width="4" fill="none"/>
+    <!-- tail -->
+    <path d="M40 132 C20 124 12 108 16 96" stroke="#e7e3cc" stroke-width="5" fill="none"/>
+    <path d="M42 140 C24 138 12 128 8 116" stroke="#c9b48c" stroke-width="5" fill="none"/>
+    <!-- feet -->
+    <path d="M70 168 v4 M84 168 v4" stroke="#d8c39b" stroke-width="4"/>
     <!-- body -->
-    <ellipse cx="102" cy="116" rx="52" ry="42" fill="#e7e3cc"/>
-    <ellipse cx="112" cy="128" rx="30" ry="22" fill="#f6f1df"/>
-    <!-- wing -->
-    <path d="M70 108 C82 92 106 96 108 112 C100 124 82 126 70 108 Z" fill="#c9b48c"/>
+    <ellipse cx="80" cy="132" rx="46" ry="38" fill="#e7e3cc"/>
+    <ellipse cx="92" cy="142" rx="26" ry="20" fill="#f6f1df"/>
+    <!-- laptop -->
+    <path d="M150 170 L170 108 L180 110 L162 170 Z" fill="#cfe0d3"/>
+    <path d="M154 166 L171 114 L176 115 L160 166 Z" fill="#9fbea8" opacity=".6"/>
+    <path d="M136 170 H206" stroke="#cfe0d3" stroke-width="6"/>
+    <!-- wing on keyboard -->
+    <path d="M70 120 C94 108 132 132 150 162 C128 166 92 152 70 120 Z" fill="#c9b48c"/>
     <!-- head -->
-    <circle cx="140" cy="70" r="30" fill="#e7e3cc"/>
+    <circle cx="110" cy="78" r="28" fill="#e7e3cc"/>
     <!-- tuft -->
-    <path d="M132 42 C126 26 134 14 144 18" stroke="#d8c39b" stroke-width="4"/>
-    <path d="M140 40 C142 24 152 18 158 24" stroke="#d8c39b" stroke-width="4"/>
-    <path d="M147 43 C156 32 166 34 166 42" stroke="#b36c52" stroke-width="4"/>
-    <!-- beak -->
-    <path d="M166 70 L192 78 L166 84 Z" fill="#d69c72"/>
-    <!-- eyes: one big, one small -->
-    <circle cx="146" cy="64" r="11" fill="#fff"/>
-    <circle cx="150" cy="66" r="5" fill="#173f37"/>
-    <circle cx="131" cy="70" r="5" fill="#fff"/>
-    <circle cx="132" cy="71" r="2.3" fill="#173f37"/>
+    <path d="M104 52 C98 38 106 28 116 32" stroke="#d8c39b" stroke-width="4" fill="none"/>
+    <path d="M112 50 C116 38 126 36 130 42" stroke="#b36c52" stroke-width="4" fill="none"/>
+    <!-- headset -->
+    <path d="M86 74 A26 26 0 0 1 132 60" stroke="#5b7f6d" stroke-width="5" fill="none"/>
+    <circle cx="87" cy="80" r="7" fill="#5b7f6d"/>
+    <path d="M88 87 Q94 104 118 102" stroke="#5b7f6d" stroke-width="3" fill="none"/>
+    <circle cx="120" cy="102" r="3.5" fill="#5b7f6d"/>
+    <!-- happy eye -->
+    <path d="M110 74 Q117 65 124 74" stroke="#173f37" stroke-width="3.5" fill="none"/>
     <!-- cheek -->
-    <circle cx="150" cy="84" r="5" fill="#e9b9a0" opacity=".8"/>
+    <circle cx="124" cy="88" r="6" fill="#e9b9a0" opacity=".85"/>
+    <!-- smiling beak -->
+    <path d="M136 74 L158 80 L137 84 Z" fill="#d69c72"/>
+    <path d="M137 86 Q148 94 156 84" stroke="#d69c72" stroke-width="4" fill="none"/>
   </g>
 </svg></div><small>En möjlig matchning</small></div>
         <span class="pill b">Struktur</span>
